@@ -22,8 +22,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import me.angienunez.tallergitgithubapp.ui.theme.TallerGitGithubAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -42,20 +45,70 @@ class MainActivity : ComponentActivity() {
 )
 @Composable
 fun TrabajoEnClase() {
-    Column(
-        modifier = Modifier.padding(all = 90.dp).fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        val painter = painterResource(R.drawable.maxito)
 
-        Image(
-            painter = painter,
-            contentDescription = "f1",
-            contentScale = ContentScale.Crop,
+    Column() {
+        Column(
             modifier = Modifier
-                .width(width = 200.dp)
-                .height(200.dp)
-                .clip(CircleShape)
-        )
+                .fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            val painter = painterResource(R.drawable.maxito)
+
+            Image(
+                painter = painter,
+                contentDescription = "f1",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .width(width = 200.dp)
+                    .height(200.dp)
+                    .clip(CircleShape)
+            )
+            Text(
+                text = "MAX VERSTAPPEN",
+
+                fontSize = 17.sp,
+                color = Color.Black,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(
+                        top = 30.dp,
+                        bottom = 5.dp,
+                        start = 30.dp,
+                        end = 30.dp
+                    ),
+
+                textAlign = TextAlign.Center
+            )
+            Text(
+                text = "Conductor formula 1",
+                textAlign = TextAlign.Center,
+                fontSize = 15.sp,
+                color = Color.Blue
+            )
+
+
+        }
+        Column() {
+            Text(
+                text = "EDAD",
+                fontSize = 15.sp,
+                color = Color.Gray
+            )
+            Text(
+                text = "28 años",
+
+                )
+            Text(
+                text = "CORRER",
+                fontSize = 15.sp,
+                color = Color.Gray
+
+            )
+        }
+
     }
+
+
 }
+

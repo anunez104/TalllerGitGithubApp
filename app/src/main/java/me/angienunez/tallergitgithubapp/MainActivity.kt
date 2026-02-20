@@ -100,11 +100,20 @@ fun TrabajoEnClase() {
 
                 )
             Text(
-                text = "CORRER",
+                text = "CORREO",
                 fontSize = 15.sp,
                 color = Color.Gray
-
             )
+            Text(
+                text = "maxito@gmail.com"
+            )
+            Text(
+                text = "CIUDAD",
+                fontSize = 15.sp,
+                color = Color.Gray
+            )
+            Text(
+                text = "Hasselt, Belgica"
         }
 
     }

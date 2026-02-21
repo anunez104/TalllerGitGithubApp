@@ -6,12 +6,14 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
@@ -53,7 +55,8 @@ fun TrabajoEnClase() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(all = 40.dp),
+                .padding(all = 40.dp)
+                .padding(horizontal = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             val painter = painterResource(R.drawable.maxito)
@@ -66,6 +69,12 @@ fun TrabajoEnClase() {
                     .width(width = 200.dp)
                     .height(200.dp)
                     .clip(CircleShape)
+                    .border(
+                        width = 4.dp,
+                        color = Color.Blue,
+                        shape = CircleShape
+                    )
+
             )
             Text(
                 text = "MAX VERSTAPPEN",
@@ -75,11 +84,12 @@ fun TrabajoEnClase() {
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .fillMaxWidth()
+
                     .padding(
                         top = 30.dp,
                         bottom = 5.dp,
                         start = 30.dp,
-                        end = 30.dp
+                        end = 30.dp,
                     ),
 
                 textAlign = TextAlign.Center
@@ -106,29 +116,41 @@ fun TrabajoEnClase() {
                 text = "EDAD",
                 fontSize = 12.sp,
                 color = Color.Gray,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .padding(horizontal = 10.dp)
             )
             Text(
                 text = "28 años",
+                modifier = Modifier
+                    .padding(horizontal = 10.dp)
 
-                )
+            )
             Text(
                 text = "CORREO",
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.Gray
+                color = Color.Gray,
+                modifier = Modifier
+                    .padding(horizontal = 10.dp)
             )
             Text(
-                text = "maxito@gmail.com"
+                text = "maxito@gmail.com",
+                modifier = Modifier
+                    .padding(horizontal = 10.dp)
             )
             Text(
                 text = "CIUDAD",
                 fontWeight = FontWeight.Bold,
                 fontSize = 12.sp,
-                color = Color.Gray
+                color = Color.Gray,
+                modifier = Modifier
+                    .padding(horizontal = 10.dp)
             )
             Text(
-                text = "Hasselt, Belgica"
+                text = "Hasselt, Belgica",
+                modifier = Modifier
+                    .padding(horizontal = 10.dp)
             )
             Divider(
                 color = Color.LightGray,
@@ -137,6 +159,7 @@ fun TrabajoEnClase() {
                     .padding(vertical = 8.dp)
                     .padding(horizontal = 16.dp)
                     .fillMaxWidth()
+
             )
 
         }
@@ -150,16 +173,23 @@ fun TrabajoEnClase() {
         )
         Text(
             text = "Mi carrera en la Fórmula 1 se basa en la pasión, la constancia y el deseo de ser el mejor. Cada carrera es una oportunidad para demostrar mi talento y crecer como piloto.",
-            modifier = Modifier.fillMaxWidth(),
-            textAlign = TextAlign.Center
-        )
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 10.dp),
+            textAlign = TextAlign.Center,
+
+
+            )
         Spacer(modifier = Modifier.weight(1f))
         Button(
             onClick = {},
             content = { Text(text = "Contactame") },
-                    modifier = Modifier.align(Alignment.CenterHorizontally),
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .padding(bottom = 40.dp)
 
-        )
+
+            )
     }
 
 

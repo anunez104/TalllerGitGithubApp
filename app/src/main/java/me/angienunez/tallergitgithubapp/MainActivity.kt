@@ -7,12 +7,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -49,7 +52,8 @@ fun TrabajoEnClase() {
     Column() {
         Column(
             modifier = Modifier
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .padding(all = 40.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             val painter = painterResource(R.drawable.maxito)
@@ -80,6 +84,14 @@ fun TrabajoEnClase() {
 
                 textAlign = TextAlign.Center
             )
+            Divider(
+                color = Color.LightGray,
+                thickness = 1.dp,
+                modifier = Modifier
+                    .padding(vertical = 8.dp)
+                    .padding(horizontal = 16.dp)
+                    .fillMaxWidth()
+            )
             Text(
                 text = "Conductor formula 1",
                 textAlign = TextAlign.Center,
@@ -92,8 +104,9 @@ fun TrabajoEnClase() {
         Column() {
             Text(
                 text = "EDAD",
-                fontSize = 15.sp,
-                color = Color.Gray
+                fontSize = 12.sp,
+                color = Color.Gray,
+                fontWeight = FontWeight.Bold
             )
             Text(
                 text = "28 años",
@@ -101,7 +114,8 @@ fun TrabajoEnClase() {
                 )
             Text(
                 text = "CORREO",
-                fontSize = 15.sp,
+                fontSize = 12.sp,
+                fontWeight = FontWeight.Bold,
                 color = Color.Gray
             )
             Text(
@@ -109,13 +123,43 @@ fun TrabajoEnClase() {
             )
             Text(
                 text = "CIUDAD",
-                fontSize = 15.sp,
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
                 color = Color.Gray
             )
             Text(
                 text = "Hasselt, Belgica"
-        }
+            )
+            Divider(
+                color = Color.LightGray,
+                thickness = 1.dp,
+                modifier = Modifier
+                    .padding(vertical = 8.dp)
+                    .padding(horizontal = 16.dp)
+                    .fillMaxWidth()
+            )
 
+        }
+        Text(
+            text = "SOBRE MI CARRERA",
+            fontSize = 12.sp,
+            color = Color.Gray,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center
+        )
+        Text(
+            text = "Mi carrera en la Fórmula 1 se basa en la pasión, la constancia y el deseo de ser el mejor. Cada carrera es una oportunidad para demostrar mi talento y crecer como piloto.",
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center
+        )
+        Spacer(modifier = Modifier.weight(1f))
+        Button(
+            onClick = {},
+            content = { Text(text = "Contactame") },
+                    modifier = Modifier.align(Alignment.CenterHorizontally),
+
+        )
     }
 
 
